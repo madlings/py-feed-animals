@@ -1,3 +1,6 @@
+def feed_animals(animals: list["Animal"]) -> int:
+    return sum(animal.feed for animal in animals)
+
 class Animal:
     def __init__(self,
                  name: str,
@@ -17,14 +20,7 @@ class Animal:
             self.is_hungry = False
             tmp = self.appetite
             self.appetite = 0
-        return tmp
-
-    @staticmethod
-    def feed_animals(animals: list["Animal"]) -> int:
-        totalfeed = 0
-        for animal in animals:
-            totalfeed += animal.feed()
-        return totalfeed
+        return tmp  
 
 
 class Cat(Animal):
