@@ -14,13 +14,12 @@ class Animal:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        tmp = 0
+        food_eaten = 0
         if (self.is_hungry):
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
-            tmp = self.appetite
-            self.appetite = 0
-        return tmp  
+            food_eaten = self.appetite            
+        return food_eaten  
 
 
 class Cat(Animal):
