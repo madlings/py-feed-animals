@@ -1,5 +1,8 @@
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(self,
+                 name: str,
+                 appetite: int,
+                 is_hungry: bool = True) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -16,7 +19,7 @@ class Animal:
             self.appetite = 0
         return tmp
 
-    @statitcmethod
+    @staticmethod
     def feed_animals(animals: list["Animal"]) -> int:
         totalfeed = 0
         for animal in animals:
@@ -29,12 +32,12 @@ class Cat(Animal):
         super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> None:
-        print(f"The hunt began!")
+        print("The hunt began!")
 
 
 class Dog(Animal):
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-          super().__init__(name, 7, is_hungry)
+        super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
-          print(f"The slippers delivered!")
+        print("The slippers delivered!")
